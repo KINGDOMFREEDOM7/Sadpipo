@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>دنیای بازی — سایت نمونه</title>
+  <title>دنیای بازی — سایت نمونه (5 صفحه‌ای)</title>
   <style>
     :root{ --bg1: #ff6b6b; --bg2: #f7b731; }
     *{box-sizing:border-box;font-family: "Vazirmatn", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
@@ -16,33 +16,29 @@
       min-height:100vh;
       color:#fff;
     }
-    /* container */
     .site{width:95%;max-width:1100px;background:rgba(255,255,255,0.06);backdrop-filter:blur(6px);border-radius:14px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,0.35)}
     header{display:flex;gap:12px;align-items:center;justify-content:space-between;padding:18px 22px}
     .brand{font-weight:700;font-size:20px}
     nav{display:flex;gap:10px}
     nav button{background:transparent;border:1px solid rgba(255,255,255,0.18);padding:8px 12px;border-radius:10px;color:inherit;cursor:pointer}
     nav button.active{background:rgba(255,255,255,0.12);}
-    main{padding:34px}
+    main{padding:26px}
     .page{display:none}
     .page.active{display:block}
-    h1{margin:0 0 8px 0;font-size:28px}
+    h1{margin:0 0 8px 0;font-size:26px}
     p{line-height:1.7;color:rgba(255,255,255,0.95)}
-    /* card style */
     .card{background:rgba(0,0,0,0.18);padding:18px;border-radius:12px}
-    /* contact */
     .contact-list{display:flex;flex-direction:column;gap:8px;margin-top:12px}
     .contact-item{display:flex;align-items:center;gap:10px;padding:10px;border-radius:8px;background:rgba(255,255,255,0.03)}
-    /* footer */
-    footer{padding:12px 22px;background:rgba(0,0,0,0.06);text-align:center;color:rgba(255,255,255,0.9)}/* small screens */
-@media (max-width:600px){
-  .brand{font-size:18px}
-  header{flex-direction:column;align-items:flex-start;gap:10px}
-}
-
-/* little visual flourish */
-.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.08);font-size:12px}
-
+    footer{padding:12px 22px;background:rgba(0,0,0,0.06);text-align:center;color:rgba(255,255,255,0.9)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px}
+    .thumb{border-radius:10px;overflow:hidden;background:#111;padding:6px}
+    .thumb img{width:100%;height:200px;object-fit:cover;display:block}
+    .caption{margin-top:8px;font-size:14px}
+    @media (max-width:600px){
+      header{flex-direction:column;align-items:flex-start;gap:10px}
+      .thumb img{height:140px}
+    }
   </style>
 </head>
 <body>
@@ -50,42 +46,84 @@
     <header>
       <div style="display:flex;align-items:center;gap:12px">
         <div class="brand">دنیای بازی</div>
-        <div class="badge">پورتال فارسی</div>
+        <div style="padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.06);font-size:12px">پورتال فارسی</div>
       </div>
       <nav aria-label="ناوبری اصلی">
-        <button id="nav-home" class="active">صفحه اول</button>
-        <button id="nav-rdr2">تحلیل Red Dead 2</button>
+        <button id="nav-home" class="active">خانه</button>
+        <button id="nav-rdr2">تحلیل RDR2</button>
+        <button id="nav-arthur">آرتور مورگان</button>
+        <button id="nav-gang">اعضای گنگ</button>
         <button id="nav-contact">تماس</button>
       </nav>
     </header><main>
-  <!-- صفحه اول -->
+  <!-- صفحه خانه -->
   <section id="page-home" class="page active">
     <div class="card">
       <h1>خوش آمدید به دنیای بازی</h1>
-      <p>دنیای بازی‌های رایانه‌ای جایی است که داستان‌ها، هنر و تجربهٔ تعاملی به هم می‌پیوندند. از ماجراجویی‌های تک‌نفره تا رقابت‌های آنلاین، بازی‌ها توانایی دارند احساسات عمیق و خاطراتی ماندگار بسازند. اینجا محلی است برای مرور، نقد و گفتگو دربارهٔ عناوینی که دنیای ما را شکل می‌دهند.</p>
+      <p>دنیای بازی‌های رایانه‌ای جایی است که داستان‌ها، هنر و تجربهٔ تعاملی به هم می‌پیوندند. اینجا مطالب، تحلیل‌ها و تصاویر مرتبط با بازی‌های بزرگ را پیدا می‌کنید—از روایت‌های تک‌نفره تا دنیاهای بزرگ و پرجزئیات.</p>
+      <div class="grid">
+        <div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="RDR2 cover"><div class="caption">کاور Red Dead Redemption 2</div></div>
+        <div class="thumb"><img src="https://via.placeholder.com/800x450?text=Arthur+Morgan" alt="Arthur placeholder"><div class="caption">آرتور مورگان — تصویر نمونه</div></div>
+      </div>
     </div>
   </section>
 
-  <!-- صفحه تحلیل Red Dead 2 -->
+  <!-- صفحه تحلیل RDR2 -->
   <section id="page-rdr2" class="page">
     <div class="card">
       <h1>تحلیل بازی Red Dead Redemption 2</h1>
-      <p>Red Dead Redemption 2 (یا به اختصار RDR2) اثری نمونه از راک‌استار گیمز است که با دقت بالا در طراحی جهان باز، روایت احساسی و پرداخت کاراکترها، استانداردهای جدیدی در ژانر وسترن و بازی‌های داستان‌محور وضع کرد. بازی با تمرکز بر جزئیات محیطی، موسیقی مناسب و مکانیک‌های غنی، تجربه‌ای کند اما تأثیرگذار ارائه می‌دهد.</p>
-
-      <h3 style="margin-top:12px">نقاط قوت</h3>
+      <p>RDR2 اثری است که به‌خاطر جهان باز فوق‌العاده، روایت عمیق و طراحی کاراکترهای شاخص مشهور شد. بازی با دقت در جزییات محیطی و توجه به تعاملات اجتماعی، تجربه‌ای سینمایی و در عین حال بازی‌محور ارائه می‌دهد.</p>
+      <h3>نکات فنی و گیم‌پلی</h3>
       <ul>
-        <li>روایت قدرتمند و دیالوگ‌های به‌خوبی نوشته‌شده.</li>
-        <li>جهان باز زنده و پرجزئیات با چرخهٔ روز/شب و آب‌وهوا.</li>
-        <li>شخصیت‌پردازی عمیق؛ تعاملات کوچک تأثیر بزرگ دارند.</li>
+        <li>فیزیک و انیمیشن‌های طبیعی که به غوطه‌وری بازیکن کمک می‌کنند.</li>
+        <li>مأموریت‌ها با تنوع بالا؛ از تعقیب و تیراندازی تا دیالوگ‌های دراماتیک.</li>
+        <li>تأکید بر انتخاب‌های بازیکن و پیامدهای اخلاقی آن‌ها.</li>
       </ul>
+      <div style="margin-top:12px" class="grid">
+        <div class="thumb"><img src="https://via.placeholder.com/800x450?text=RDR2+Scene+1" alt="RDR2 scene 1"><div class="caption">صحنه‌ای از جهان بازی</div></div>
+        <div class="thumb"><img src="https://via.placeholder.com/800x450?text=RDR2+Scene+2" alt="RDR2 scene 2"><div class="caption">صدای محیط و موسیقی به تجربه می‌افزاید</div></div>
+      </div>
+    </div>
+  </section>
 
-      <h3 style="margin-top:12px">نقاط قابل توجه</h3>
-      <ul>
-        <li>گیم‌پلی کند و واقع‌گرایانه که برای همه سلیقه‌ها مناسب نیست.</li>
-        <li>برخی قسمت‌ها پیشروی آهسته‌ای دارند که ممکن است صبر بازیکن را بسنجند.</li>
-      </ul>
+  <!-- صفحه آرتور مورگان -->
+  <section id="page-arthur" class="page">
+    <div class="card">
+      <h1>آرتور مورگان</h1>
+      <p>آرتور مورگان شخصیت محوری در Red Dead Redemption 2 است؛ عضوی کلیدی از گنگ ون‌درلیند. داستان او حول تضادهای درونی، وفاداری و تلاش برای بقا در جهانی در حال تغییر می‌چرخد.</p>
+      <div class="grid">
+        <div class="thumb"><img src="https://via.placeholder.com/800x450?text=Arthur+Portrait+1" alt="Arthur portrait"><div class="caption">پرترهٔ آرتور</div></div>
+        <div class="thumb"><img src="https://via.placeholder.com/800x450?text=Arthur+Horse" alt="Arthur on horse"><div class="caption">آرتور و اسبش</div></div>
+        <div class="thumb"><img src="https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg" alt="Arthur promo"><div class="caption">تصویر تبلیغاتی بازی (نمونه)</div></div>
+      </div>
+      <h3 style="margin-top:12px">چرا آرتور مهم است؟</h3>
+      <p>آرتور به عنوان یک شخصیت پیچیده با رشد روایی قابل‌توجه، ابزاری است برای بررسی موضوعاتی مثل توبه، هویت و پیامدهای انتخاب‌ها. او نه قهرمان کامل است و نه شرورِ بی‌چون‌وچرایی؛ همین پیچیدگی باعث تأثیرگذاری او می‌شود.</p>
+    </div>
+  </section>
 
-      <p style="margin-top:12px">در کل، اگر به دنبال تجربه‌ای سینمایی در بستری باز و پویا هستید که تأکید بر روایت و حس مکان دارد، RDR2 یکی از بهترین انتخاب‌ها است.</p>
+  <!-- صفحه اعضای گنگ -->
+  <section id="page-gang" class="page">
+    <div class="card">
+      <h1>اعضای گنگ ون‌درلیند</h1>
+      <p>گنگ ون‌درلیند گروهی از پرسونای‌های متفاوت است؛ از رهبری کاریزماتیک تا اعضای وفادار و گاهی متناقض. در ادامه چند عضو اصلی را می‌بینید:</p>
+
+      <div class="grid">
+        <div>
+          <div class="thumb"><img src="https://via.placeholder.com/800x450?text=Dutch+van+der+Linde" alt="Dutch"><div class="caption">داچ ون‌درلیند — رهبر گنگ</div></div>
+          <p style="margin-top:8px">داچ رهبر کاریزماتیک گروه است که ایده‌ها و تصمیماتش سرنوشت گنگ را می‌سازد.</p>
+        </div>
+
+        <div>
+          <div class="thumb"><img src="https://via.placeholder.com/800x450?text=John+Marston" alt="John"><div class="caption">جان مارستون</div></div>
+          <p style="margin-top:8px">جان یکی از اعضای شناخته‌شدهٔ گنگ که داستان او در RDR1 ادامه پیدا می‌کند.</p>
+        </div>
+
+        <div>
+          <div class="thumb"><img src="https://via.placeholder.com/800x450?text=Micah+Bell" alt="Micah"><div class="caption">میکاه بل</div></div>
+          <p style="margin-top:8px">میکاه شخصیتی جنجالی و مناقشه‌برانگیز است که رفتارهایش تأثیرات شدیدی بر گروه می‌گذارد.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -104,19 +142,23 @@
 </main>
 
 <footer>
- ساخته شده با ❤️ - توسط KINGDOMFREEDOM
+  ساخته شده با ❤️ — KINGDOMFREEDOM
 </footer>
 
   </div>  <script>
-    // صفحه‌بندی SPA ساده
+    // ناوبری SPA
     const pages = {
       home: document.getElementById('page-home'),
       rdr2: document.getElementById('page-rdr2'),
+      arthur: document.getElementById('page-arthur'),
+      gang: document.getElementById('page-gang'),
       contact: document.getElementById('page-contact')
     };
     const navBtns = {
       home: document.getElementById('nav-home'),
       rdr2: document.getElementById('nav-rdr2'),
+      arthur: document.getElementById('nav-arthur'),
+      gang: document.getElementById('nav-gang'),
       contact: document.getElementById('nav-contact')
     };
     function show(pageKey){
@@ -124,17 +166,16 @@
       Object.values(navBtns).forEach(b=>b.classList.remove('active'));
       pages[pageKey].classList.add('active');
       navBtns[pageKey].classList.add('active');
+      // اسکرول به بالا برای تجربه بهتر
+      window.scrollTo({top:0,behavior:'smooth'});
     }
-    navBtns.home.addEventListener('click',()=>show('home'));
-    navBtns.rdr2.addEventListener('click',()=>show('rdr2'));
-    navBtns.contact.addEventListener('click',()=>show('contact'));
+    Object.keys(navBtns).forEach(k=>navBtns[k].addEventListener('click',()=>show(k)));
 
-    // پس‌زمینهٔ رنگی درخشان که هر چند ثانیه عوض می‌شود
+    // پس‌زمینهٔ رنگی درخشان که هر ~3.8 ثانیه عوض می‌شود
     function randBrightColor(){
-      // رنگ‌های اشباع و روشن
       const h = Math.floor(Math.random()*360);
-      const s = 80 + Math.random()*10; // %
-      const l = 50 + Math.random()*10; // %
+      const s = 80 + Math.random()*10;
+      const l = 50 + Math.random()*10;
       return `hsl(${h} ${s}% ${l}%)`;
     }
     function setGradient(){
@@ -142,18 +183,18 @@
       const c2 = randBrightColor();
       document.documentElement.style.setProperty('--bg1', c1);
       document.documentElement.style.setProperty('--bg2', c2);
-      // همچنین صریحاً بک‌گراند بادی را هم سریع‌تر تغییر می‌کنیم
       document.body.style.background = `linear-gradient(135deg, ${c1}, ${c2})`;
     }
-    // تغییر هر 3.8 ثانیه (چند ثانیه)، با انیمیشن نرم
     setGradient();
     setInterval(setGradient, 3800);
 
-    // رمزی کوچک برای پیمایش با کلیدهای صفحه
+    // کلید‌های سریع 1..5
     document.addEventListener('keydown', (e)=>{
       if(e.key === '1') show('home');
       if(e.key === '2') show('rdr2');
-      if(e.key === '3') show('contact');
+      if(e.key === '3') show('arthur');
+      if(e.key === '4') show('gang');
+      if(e.key === '5') show('contact');
     });
   </script></body>
 </html>
